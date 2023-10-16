@@ -23,6 +23,9 @@ const adminRoutes = require('./routes/adminApi');
 app.use('/api/admin', adminRoutes);
 const productsRoutes = require('./routes/productApi');
 app.use('/api/product', productsRoutes)
+const employeeRoutes = require('./routes/employApi');
+app.use('/api/employee', employeeRoutes)
+
 
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);

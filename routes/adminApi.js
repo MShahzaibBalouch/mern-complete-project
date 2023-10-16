@@ -89,9 +89,8 @@ router.post('/logout', (req, res) => {
 
 function verifyToken(req, res, next) {
   const token = req.session.token || req.headers['authorization'];
-  console.log('Token : ', token);
   if (!token) {
-    return res.status(402).json({ message: 'Unauthorized' });
+    return res.status(403).json({ message: 'Unauthorized' });
   }
 
   jwt.verify(token, secret_key, (err, decoded) => {
