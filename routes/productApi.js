@@ -9,7 +9,7 @@ const Product = require('../models/product');
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    const uploadPath = path.join(__dirname, 'uploads');
+    const uploadPath = path.join(__dirname, 'upload');
     fs.mkdirSync(uploadPath, { recursive: true });
     cb(null, uploadPath);
   },
