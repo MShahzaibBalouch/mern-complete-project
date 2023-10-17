@@ -25,6 +25,12 @@ const productsRoutes = require('./routes/productApi');
 app.use('/api/product', productsRoutes)
 const employeeRoutes = require('./routes/employApi');
 app.use('/api/employee', employeeRoutes)
+const dashboard = require('./routes/adminDashboardApi');
+app.use('/api/dashboard', dashboard)
+const userRoutes = require('./routes/userApi');
+app.use('/api/user', userRoutes)
+const userCountWeeklyRoutes = require('./routes/userCounter');
+app.use('/api/user/counter', userCountWeeklyRoutes)
 
 
 app.listen(port, () => {
